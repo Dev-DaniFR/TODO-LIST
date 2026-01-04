@@ -1,0 +1,167 @@
+/* RESET + FONTE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* FUNDO IT GIRL */
+body {
+  background: radial-gradient(
+    circle at top left,
+    #fdf6f0,
+    #f7efe7,
+    #efe7dd
+  );
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.2s ease;
+}
+
+/* ANIMAÇÃO ENTRADA */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CONTAINER */
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  width: 380px;
+  padding: 30px 26px;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  animation: slideUp 0.9s ease;
+}
+
+/* ANIMAÇÃO CONTAINER */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TÍTULO */
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3a3a3a;
+  margin-bottom: 22px;
+}
+
+/* INPUT AREA */
+.input-area {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+/* INPUT */
+input {
+  flex: 1;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #e2d6c8;
+  background: #faf7f4;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #c9a889;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(201, 168, 137, 0.15);
+}
+
+/* BOTÃO */
+button {
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #d7bfa8, #c3a78c);
+  color: #ffffff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* LISTA */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ITEM */
+li {
+  background: linear-gradient(135deg, #f7f1eb, #f1e8df);
+  padding: 16px 18px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  animation: itemAppear 0.4s ease;
+  transition: all 0.25s ease;
+}
+
+/* ENTRADA DOS ITENS */
+@keyframes itemAppear {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* HOVER ITEM */
+li:hover {
+  transform: scale(1.02);
+}
+
+/* CONCLUÍDO */
+.completed {
+  text-decoration: line-through;
+  color: #9c8f84;
+}
+
+/* BOTÃO REMOVER */
+li button {
+  background: transparent;
+  border: none;
+  color: #b5987d;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+li button:hover {
+  color: #8f7259;
+}
